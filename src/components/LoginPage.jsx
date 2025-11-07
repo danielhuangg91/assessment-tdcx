@@ -19,7 +19,7 @@ export const LoginPage = () => {
         setId('');
         setName('');
         
-        navigate("@/dashboard");
+        navigate("/dashboard");
         window.location.reload();
     }
 
