@@ -6,4 +6,9 @@ import tailwindcss from "@tailwindcss/vite"
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/assessment-tdcx",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"), //this command is to create an alias for src path
+    }
+  }
 });
