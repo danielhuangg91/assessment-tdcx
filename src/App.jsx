@@ -9,12 +9,12 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="/"
-          element={isLoggedIn ? <Navigate to="/dashboard" /> : <LoginPage />}
+          path="*"
+          element={isLoggedIn ? <Navigate to="https://danielhuangg91.github.io/assessment-tdcx/dashboard" /> : <LoginPage />}
         />
         <Route
-          path="/dashboard"
-          element={isLoggedIn ? <Dashboard /> : <Navigate to="/" />}
+          path="https://danielhuangg91.github.io/assessment-tdcx/dashboard"
+          element={isLoggedIn ? <Dashboard /> : <Navigate to="*" />}
         />
       </Routes>
     </Router>
