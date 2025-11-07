@@ -19,7 +19,7 @@ export const LoginPage = () => {
         setId('');
         setName('');
         
-        navigate("/dashboard");
+        navigate("https://danielhuangg91.github.io/assessment-tdcx/Dashboard");
         window.location.reload();
     }
 
