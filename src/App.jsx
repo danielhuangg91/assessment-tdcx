@@ -10,10 +10,10 @@ function App() {
       <Routes>
         <Route
           path="*"
-          element={isLoggedIn ? <Navigate to="@/dashboard" /> : <LoginPage />}
+          element={isLoggedIn ? <Navigate to="/dashboard" /> : <LoginPage />}
         />
         <Route
-          path="@/dashboard"
+          path="/dashboard"
           element={isLoggedIn ? <Dashboard /> : <Navigate to="/" />}
         />
       </Routes>
