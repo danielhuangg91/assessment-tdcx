@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Plus, Search, Pencil, Trash2 } from 'lucide-react';
 import { useState } from "react";
-import { Modal } from "./Modal";
-import { NewTask } from "./NewTask"
+import { Modal } from "@/Modal";
+import { NewTask } from "@/NewTask"
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 import Swal from 'sweetalert2';
 
@@ -150,7 +150,7 @@ export const Dashboard = () => {
         <div className="container mx-auto">
             <div className="fixed top-0 left-0 w-full h-[42px] flex items-center p-8 bg-white">
                 <div
-                    className="w-[40px] h-[40px] overflow-hidden bg-[url(./src/assets/img/daniel-yie.jpg)] bg-center bg-cover rounded-full bg-origin-padding"
+                    className="w-[40px] h-[40px] overflow-hidden bg-[url(@/src/assets/img/daniel-yie.jpg)] bg-center bg-cover rounded-full bg-origin-padding"
                 >
                 </div>
                 <div
