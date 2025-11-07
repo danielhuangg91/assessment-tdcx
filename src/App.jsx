@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="*"
           element={isLoggedIn ? <Navigate to="/dashboard" /> : <LoginPage />}
         />
         <Route
