@@ -150,7 +150,7 @@ export const Dashboard = () => {
         <div className="container mx-auto">
             <div className="fixed top-0 left-0 w-full h-[42px] flex items-center p-8 bg-white">
                 <div
-                    className="w-[40px] h-[40px] overflow-hidden bg-[url(https://plus.unsplash.com/premium_photo-1739786995646-480d5cfd83dc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1160)] bg-center bg-cover rounded-full bg-origin-padding"
+                    className="w-[40px] h-[40px] overflow-hidden bg-[url(./src/assets/img/daniel-yie.jpg)] bg-center bg-cover rounded-full bg-origin-padding"
                 >
                 </div>
                 <div
