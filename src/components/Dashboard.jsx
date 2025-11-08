@@ -31,13 +31,6 @@ export const Dashboard = () => {
 
   const widgetCard = 'p-4 shadow-md bg-white w-full rounded-md';
 
-  const data = [
-    { name: "Completed Tasks", value: 25 },
-    { name: "Remaining Tasks", value: 75 },
-  ];
-
-  const pieColor = ["#4F86F7", "#E8EBED"]; // blue and light gray
-
 //   const taskList = () => {
 //     const [tasks, setTasks] = useState([
 //         { id: 1, text: "Clean the room", completed: false },
@@ -66,6 +59,13 @@ export const Dashboard = () => {
     //These will automatically update whenever tasks changes
     const totalTasks = tasks.length;
     const completedTasks = tasks.filter(task => task.completed).length;
+
+    const data = [
+        { name: "Completed Tasks", value: completedTasks },
+        { name: "Remaining Tasks", value: totalTasks - completedTasks },
+    ];
+
+    const pieColor = ["#4F86F7", "#E8EBED"]; // blue and light gray
 
     const toggleComplete = (id) => {
         setTasks(tasks.map(task => 
@@ -102,7 +102,6 @@ export const Dashboard = () => {
             Swal.fire('Deleted!', 'Your task has been deleted.', 'success');
             }
         });
-        
     };
 
     const editTask = async (id) => {
@@ -224,6 +223,7 @@ export const Dashboard = () => {
                                     outerRadius={50}
                                     fill="#8884d8"
                                     dataKey="value"
+                                    stroke="none"
                                     >
                                     {data.map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={pieColor[index % pieColor.length]} />
@@ -238,8 +238,10 @@ export const Dashboard = () => {
                                     /> */}
                                 </PieChart>
                                 {/* If we want to use arrow label */}
-                                <div className="absolute top-[10px] right-[-82px] text-[#8884d8] text-xs tracking-wide">
+                                <div className="absolute top-[-8px] right-[-90px] text-[#8884d8] text-xs tracking-wide">
                                     Completed<br/>Task
+                                    <br/>
+                                    <span className="font-bold">{totalTasks > 0 ? ((completedTasks / totalTasks) * 100).toFixed(0) : 0}%</span>
                                     <div className="absolute bottom-[8px] left-[-26px] w-[25px] h-[1px] bg-[#8884d8] rotate-135"/>
                                 </div>
                             </div>
@@ -248,7 +250,7 @@ export const Dashboard = () => {
                 </div>
                 <div className="relative flex flex-col md:flex-row md:mt-6">
                     <div className="text-xl text-[#537178] font-medium tracking-wide mt-4 text-center">Tasks</div>
-                    <div className="relative bg-[#D9DFEB] w-full h-[40px] flex items-center rounded-md md:w-[250px] md:absolute md:right-[120px] md:top-[10px]">
+                    <div className="relative bg-[#D9DFEB] w-full h-[40px] flex items-center rounded-md md:w-[250px] md:absolute md:right-[130px] md:top-[10px]">
                         <div className="absolute left-0 top-0 w-[40px] h-[40px] flex items-center justify-center">                            
                             <Search className="w-4" />
                         </div>
