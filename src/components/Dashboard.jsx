@@ -238,7 +238,7 @@ export const Dashboard = () => {
                                     /> */}
                                 </PieChart>
                                 {/* If we want to use arrow label */}
-                                <div className="absolute top-[-8px] right-[-90px] text-[#8884d8] text-xs tracking-wide">
+                                <div className="absolute top-[-8px] right-[-82px] text-[#8884d8] text-xs tracking-wide">
                                     Completed<br/>Task
                                     <br/>
                                     <span className="font-bold">{totalTasks > 0 ? ((completedTasks / totalTasks) * 100).toFixed(0) : 0}%</span>
